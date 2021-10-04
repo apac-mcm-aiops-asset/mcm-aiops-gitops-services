@@ -1,0 +1,15 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-management-orchestrator
+  namespace: openshift-marketplace
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
+spec:
+  displayName: IBM Management Orchestrator Catalog
+  publisher: IBM
+  sourceType: grpc
+  image: {{ .Values.mcm.config.catalogSourceImage }} # ${CP4MCM_CATALOGSOURCE_IMAGE}
+  updateStrategy:
+    registryPoll:
+      interval: 45m
