@@ -3,8 +3,6 @@ kind: Subscription
 metadata:
   name: ibm-management-orchestrator
   namespace: openshift-operators
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
 spec:
   channel: {{.Values.mcm.config.subscriptionChannel}}
   installPlanApproval: Automatic

@@ -3,8 +3,6 @@ kind: CatalogSource
 metadata:
   name: ibm-management-orchestrator
   namespace: openshift-marketplace
-  annotations:
-    argocd.argoproj.io/sync-wave: "-2"
 spec:
   displayName: IBM Management Orchestrator Catalog
   publisher: IBM
