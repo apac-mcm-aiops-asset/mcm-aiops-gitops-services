@@ -6,7 +6,7 @@ mcm:
     fileGidStorageClass: ocs-storagecluster-cephfs
     monitoringEnabled: true
     infrastructureManagementEnabled: true
-    entitledRegistrySecret: ibm-management-pull-secret
+    entitledRegistrySecret: ibm-entitlement-key
 #    mcmCoreDisabled - During IBM Cloud Pak for Multicloud Management installation, the default services operators are
 #    installed by default. If you installed Red Hat® Advanced Cluster Management for Kubernetes in your cluster,
 #    set mcmCoreDisabled: true. This setting disables the default ibm-management-mcm operator installation.
