@@ -4,7 +4,7 @@ mcm:
     namespace: ibm-cp4mcm
     blockStorageClass: ocs-storagecluster-ceph-rbd
     fileGidStorageClass: ocs-storagecluster-cephfs
-    monitoringEnabled: true
+    monitoringEnabled: false
     infrastructureManagementEnabled: true
     entitledRegistrySecret: ibm-entitlement-key
 #    mcmCoreDisabled - During IBM Cloud Pak for Multicloud Management installation, the default services operators are
