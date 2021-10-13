@@ -1,8 +1,8 @@
 apiVersion: charts.helm.k8s.io/v1
 kind: Xl
 metadata:
-  name: xl-release
   namespace: turbonomic
+  name: xl-release
 spec:
   # Default values copied from <project_dir>/helm-charts/xl/values.yaml
 
@@ -11,14 +11,22 @@ spec:
   # Declare variables to be passed into your templates.
 
   # Any changes run : kubectl apply -f deploy/crds/charts_v1alpha1_xl_cr.yaml -n turbonomic
-
+  nginxingress: 
+    enabled: false
+  openshiftingress: 
+    enabled: true
+  #ingress:
+    # domain: *.turbonomic.com
   # Global settings
   global:
-  #  registry: index.docker.io
-  #  imageUsername: turbouser
-  #  imagePassword: turbopassword
+    registry: index.docker.io
+#    imageUsername: turbouser
+#    imagePassword: turbopassword
     repository: turbonomic
-    tag: 8.3.4
+#    storageClassName: managed-nfs-storage
+#    securityContext:
+#      fsGroup: 1000650000 
+    tag: 8.3.2
     #externalIP: 10.0.2.15
     #externalDbIP: 10.0.2.15
     #externalTimescaleDBIP: 10.0.2.15
@@ -26,67 +34,75 @@ spec:
     #enableExternalSecrets: true
 
 # Component selector - Probes
-#  actionscript:
-#    enabled: true
-#  actionstream-kafka:
-#    enabled: false
-#  appdynamics:
-#    enabled: true
-#  appinsights:
-#    enabled: true
-#  aws:
-#    enabled: true
-#  azure:
-#    enabled: true
-#  dynatrace:
-#    enabled: true
-#  hpe3par:
-#    enabled: true
-#  horizon:
-#    enabled: false
-#  hyperflex:
-#    enabled: false
-#  hyperv:
-#    enabled: true
-#  netapp:
-#    enabled: true
-#  nutanix:
-#    enabled: true
-#  oneview:
-#    enabled: true
-#  pure:
-#    enabled: true
-#  scaleio:
-#    enabled: false
-#  servicenow:
-#    enabled: false
-#  ucs:
-#    enabled: true
-#  vcenter:
-#    enabled: true
-#  vmax:
-#    enabled: true
-#  vmm:
-#    enabled: true
-#  wmi:
-#    enabled: true
-#  snmp:
-#    enabled: true
-#  mssql:
-#    enabled: true
-#  mysql:
-#    enabled: false
-#  oracle:
-#    enabled: false
-#  tomcat:
-#    enabled: false
-#  jvm:
-#    enabled: false
-#  newrelic:
-#    enabled: true
-#  udt:
-#    enabled: true
-#  websphere:
-#    enabled: false
-#  weblogic:
-#    enabled: false
+  actionscript:
+    enabled: true
+  actionstream-kafka:
+    enabled: true
+  appdynamics:
+    enabled: true
+  appinsights:
+    enabled: true
+  aws:
+    enabled: true
+  azure:
+    enabled: true
+  dynatrace:
+    enabled: true
+  hpe3par:
+    enabled: true
+  horizon:
+    enabled: false
+  hyperflex:
+    enabled: false
+  hyperv:
+    enabled: true
+  instana:
+    enabled: true
+  kubeturbo:
+    enabled: true
+  netapp:
+    enabled: true
+  nutanix:
+    enabled: true
+  oneview:
+    enabled: true
+  prometheus:
+    enabled: true
+  prometurbo:
+    enabled: true
+  pure:
+    enabled: true
+  scaleio:
+    enabled: true
+  servicenow:
+    enabled: true
+  ucs:
+    enabled: true
+  vcenter:
+    enabled: true
+  vmax:
+    enabled: true
+  vmm:
+    enabled: true
+  wmi:
+    enabled: true
+  snmp:
+    enabled: true
+  mssql:
+    enabled: true
+  mysql:
+    enabled: true
+  oracle:
+    enabled: true
+  tomcat:
+    enabled: true
+  jvm:
+    enabled: true
+  newrelic:
+    enabled: true
+  udt:
+    enabled: true
+  websphere:
+    enabled: true 
+  weblogic:
+    enabled: true

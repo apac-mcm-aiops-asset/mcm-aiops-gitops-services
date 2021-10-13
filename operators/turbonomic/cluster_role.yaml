@@ -3,7 +3,6 @@ kind: ClusterRole
 metadata:
   creationTimestamp: null
   name: t8c-operator
-  namespace: turbonomic
 rules:
 - apiGroups:
   - ""
