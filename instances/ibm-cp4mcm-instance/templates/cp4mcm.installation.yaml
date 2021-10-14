@@ -70,7 +70,7 @@ spec:
                     couchdbdata: 5Gi
                     datalayerjobs: 5Gi
                     elasticdata: 5Gi
-                    kafkadata: 10Gi
+                    kafkadata: 25Gi
                     zookeeperdata: 1Gi
       enabled: {{.Values.mcm.config.monitoringEnabled}} # false
       name: monitoring
