@@ -16,6 +16,6 @@ spec:
       containers:
       - name: cp4mcm-postinstall
         image: quay.io/congxdev/cp4mcm-ldap:2.3
+        imagePullPolicy: Always
       restartPolicy: Never
-      imagePullPolicy: Always
   backoffLimit: 2
