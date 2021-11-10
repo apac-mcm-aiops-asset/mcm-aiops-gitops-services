@@ -1,0 +1,10 @@
+infra-automation:
+  enabled: true
+  config:
+    namespace: ibm-infra-automation
+    blockStorageClass: ocs-storagecluster-ceph-rbd
+    fileGidStorageClass: ocs-storagecluster-cephfs
+    roksEnabled: false
+    roksRegion: au-syd
+    roksZone: au-syd-05
+    entitledRegistrySecret: ibm-entitlement-key

@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: ibm-infra-automation-postinstall
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/sync-wave: "100"
+  labels:
+    gitops.tier.group: ibm-cloudpak
+    gitops.tier.layer: services
+  namespace: {{.Values.infra-automation.config.namespace}} # NAMESPACE
+spec:
+  template:
+    spec:
+      containers:
+      - name: infra-automation-postinstall
+        image: quay.io/congxdev/cp4mcm-ldap:2.3
+        imagePullPolicy: Always
+      restartPolicy: Never
+  backoffLimit: 2
