@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: infra-automation-postinstall
-        image: quay.io/congxdev/cp4mcm-ldap:2.3
+        image: quay.io/congxdev/infra-automation-ldap:3.2
         imagePullPolicy: Always
       restartPolicy: Never
   backoffLimit: 2
