@@ -51,10 +51,10 @@ spec:
                   existingDynamicVolume: false
                   size: 100Gi
                   useDynamicProvisioning: true
-              {{- if .Values.infraAutomation.config.roksEnabled}}
+              {{- if .Values.infraAutomation.config.roks.enabled}}
               roks: true
-              roksRegion: {{.Values.infraAutomation.config.roksRegion}}
-              roksZone: {{.Values.infraAutomation.config.roksZone}}
+              roksRegion: {{.Values.infraAutomation.config.roks.region}}
+              roksZone: {{.Values.infraAutomation.config.roks.zone}}
               {{- else}}
               roks: false
               {{- end}}
