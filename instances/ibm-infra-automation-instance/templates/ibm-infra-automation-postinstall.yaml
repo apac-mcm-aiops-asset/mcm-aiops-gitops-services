@@ -3,9 +3,7 @@ kind: Job
 metadata:
   generateName: ibm-infra-automation-postinstall
   annotations:
-    argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "295"
   labels:
     gitops.tier.group: ibm-cloudpak
     gitops.tier.layer: services
