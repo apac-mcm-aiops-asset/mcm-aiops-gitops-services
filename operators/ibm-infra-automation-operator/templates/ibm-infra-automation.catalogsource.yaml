@@ -7,7 +7,7 @@ spec:
   displayName: IBM Infrastructure Automation Installer Catalog
   publisher: IBM Infrastructure Automation
   sourceType: grpc
-  image: {{ .Values.infra-automation.config.catalogSourceImage }} # ${CP4MCM_CATALOGSOURCE_IMAGE}
+  image: {{ .Values.infraAutomation.config.catalogSourceImage }} # ${CP4MCM_CATALOGSOURCE_IMAGE}
   updateStrategy:
     registryPoll:
       interval: 45m

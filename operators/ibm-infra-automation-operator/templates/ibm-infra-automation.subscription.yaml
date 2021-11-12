@@ -4,7 +4,7 @@ metadata:
   name: ibm-management-orchestrator
   namespace: openshift-operators
 spec:
-  channel: {{.Values.infra-automation.config.subscriptionChannel}}
+  channel: {{.Values.infraAutomation.config.subscriptionChannel}}
   installPlanApproval: Automatic
   name: ibm-management-orchestrator
   source: ibm-management-orchestrator

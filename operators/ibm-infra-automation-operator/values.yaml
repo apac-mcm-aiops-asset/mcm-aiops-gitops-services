@@ -1,4 +1,4 @@
-infra-automation:
+infraAutomation:
   enabled: true
   config:
     version: 2.3
