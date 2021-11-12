@@ -9,7 +9,7 @@ metadata:
   labels:
     gitops.tier.group: ibm-cloudpak
     gitops.tier.layer: services
-  namespace: {{.Values.infra-automation.config.namespace}} # NAMESPACE
+  namespace: {{.Values.infraAutomation.config.namespace}} # NAMESPACE
 spec:
   template:
     spec:
