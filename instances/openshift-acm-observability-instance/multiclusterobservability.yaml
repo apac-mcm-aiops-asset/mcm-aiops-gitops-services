@@ -2,9 +2,10 @@ apiVersion: observability.open-cluster-management.io/v1beta1
 kind: MultiClusterObservability
 metadata:
   name: observability
+  annotations: 
 spec:
   availabilityConfig: Basic             # Available values are High or Basic
-  enableDownSampling: false             # The default value is false. This is not recommended as querying long-time ranges without non-downsampled data is not efficient and useful.
+  enableDownSampling: true             # The default value is false. This is not recommended as querying long-time ranges without non-downsampled data is not efficient and useful.
   imagePullPolicy: Always
   imagePullSecret: multiclusterhub-operator-pull-secret    # The pull secret generated above
   observabilityAddonSpec:               # The ObservabilityAddonSpec defines the global settings for all managed clusters which have observability add-on enabled
@@ -17,5 +18,3 @@ spec:
     metricObjectStorage:
       name: thanos-object-storage
       key: thanos.yaml
-    statefulSetSize: 10Gi               # The amount of storage applied to the Observability StatefulSets, i.e. Amazon S3 store, Rule, compact and receiver.
-    statefulSetStorageClass: ocs-storagecluster-ceph-rbd
