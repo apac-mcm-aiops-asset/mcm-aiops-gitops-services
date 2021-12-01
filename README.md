@@ -1,4 +1,10 @@
-# Catalog of Operators and Instances Catalog for MCM AIOps Asset
+# Note 💡
+
+This repository has been archived and will no-longer be maintained.
+
+You can find it's new location at : https://github.com/one-touch-provisioning/otp-gitops-services
+
+## Catalog of Operators and Instances Catalog for MCM AIOps Asset
 
 This git repository serves as a catalog/library of Operators and Instances of the custom resource(s) provided by the Operators for the [MCM AIOps Asset](https://github.com/apac-mcm-aiops-asset/mcm-aiops-gitops).  The Operator and Instance YAMLs are package as a Helm Chart and can be referenced by ArgoCD Applications.
 
